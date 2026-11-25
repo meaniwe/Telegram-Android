@@ -22,10 +22,10 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build Arm64 Debug APK
-        run: ./gradlew :TMessagesProj_App:assembleArm64Debug
+        run: ./gradlew :TMessagesProj_App:assembleStandaloneArm64Debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: HunterGram-APK
-          path: TMessagesProj_App/build/outputs/apk/arm64/debug/*.apk
+          path: TMessagesProj_App/build/outputs/apk/standaloneArm64/debug/*.apk
