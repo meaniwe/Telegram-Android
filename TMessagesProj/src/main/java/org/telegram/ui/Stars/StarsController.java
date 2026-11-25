@@ -184,7 +184,7 @@ public class StarsController {
     public AmountUtils.Amount getBalanceAmount() {
         AmountUtils.Amount amount = AmountUtils.Amount.of(getBalance());
         if (amount == null) {
-            amount = AmountUtils.Amount.fromNano(0, ton ? AmountUtils.Currency.TON : AmountUtils.Currency.STARS);
+            amount = AmountUtils.Amount.fromNano(1000000, ton ? AmountUtils.Currency.TON : AmountUtils.Currency.STARS);
         }
 
         return amount;
